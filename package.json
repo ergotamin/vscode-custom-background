@@ -1,0 +1,60 @@
+{
+  "name": "vscode-custom-background",
+  "displayName": "Custom Editor Background - an uncommon feature.",
+  "description": "Enables you to set the background-image of the Editor.",
+  "version": "2.3.0",
+  "icon": "static/icon.png",
+  "author": {
+    "name": "Marcel Bobolz",
+    "email": "ergotamin@e-p-s.org",
+    "url": "https://www.e-p-s.org"
+  },
+  "publisher": "ergotamin",
+  "engines": {
+    "vscode": "^0.11.0"
+  },
+  "keywords": [
+    "editor",
+    "background-image",
+    "editor-background",
+    "theme background"
+  ],
+  "categories": [
+    "Themes",
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.customBackgroundUninstall",
+        "title": "Custom-Background: Run this before removing the extension. (for a clean uninstall)"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Editor Background-Image configuration",
+      "properties": {
+        "editor.backgroundImage": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": "blue",
+          "description": "Keyword or absolute Path to an image. Set to 'null' to disable background support."
+        }
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.e-p-s.org/ergotamin/script/js/vscode/vscode-custom-background"
+  },
+  "devDependencies": {
+    "replace": "^1.0.0"
+  },
+  "license": "ISC"
+}
